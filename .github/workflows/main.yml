@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: 'svelte-kit-app' #Must be unique in Heroku
-          heroku_email: '${{secrets.HEROKU_EMAIL}}'
+      - uses: ./.github/workflows/deploy.yml
+      with:
+        heroku_app_name: 'svelte-kit-app'
