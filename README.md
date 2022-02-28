@@ -1,6 +1,6 @@
 # create-svelte
 
-## prod :
+## Env app :
 
 [prod](https://svelte-kit-app.herokuapp.com/)
 
