@@ -1,14 +1,20 @@
-# create-svelte
+# Svele-app-kit sample real app
+## Goal 
+This a repo to apply all practices learned and tests others. 
+- will have a git-flow standart 
+- end-to-end testing (cucumber and puppeter)
+- Code as Infrastructure 
+- kubernetes / or serverless
 
-## Env app :
+[Svelte-kit-app](https://svelte-kit-app.herokuapp.com/)
 
-[prod](https://svelte-kit-app.herokuapp.com/)
+# Developement
 
-[dev](https://svelte-kit-app-dev.herokuapp.com/)
+## Requirements 
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+- [nodeJs](https://nodejs.org/en/)
 
-## Developing
+## Dev
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
