@@ -4,13 +4,18 @@ on:
   push:
     branches:
       - develop
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Dependency
+        run: yarn install
+      - name: Lint
+        run: yarn lint
+      - name: Deploy To heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'svelte-kit-app-dev' #Must be unique in Heroku
