@@ -10,11 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Dependency
-        run: yarn install
-      - name: Lint
-        run: yarn lint
-      - name: Deploy To heroku
+      - name: Deploy To heroku 'svelte-kit-app-dev'
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
