@@ -1,16 +1,19 @@
 # Svele-app-kit sample real app
-## Goal 
-This a repo to apply all practices learned and tests others. 
-- will have a git-flow standart 
+
+## Goal
+
+This a repo to apply all practices learned and tests others.
+
+- will have a git-flow standart
 - end-to-end testing (cucumber and puppeter)
-- Code as Infrastructure 
+- Code as Infrastructure
 - kubernetes / or serverless
 
 [Svelte-kit-app](https://svelte-kit-app.herokuapp.com/)
 
 # Developement
 
-## Requirements 
+## Requirements
 
 - [nodeJs](https://nodejs.org/en/)
 
