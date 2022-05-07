@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Deploy To heroku 'svelte-kit-app-dev'
-        uses: akhileshns/heroku-deploy@v3.12.12
+      - name: Deploy to Heroku 'svelte-kit-app-dev'
+        uses: AkhileshNS/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'svelte-kit-app-dev' #Must be unique in Heroku
