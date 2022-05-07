@@ -16,5 +16,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'svelte-kit-app-dev' #Must be unique in Heroku
           heroku_email: '${{secrets.HEROKU_EMAIL}}'
-          branch: master
+          branch: develop
 
