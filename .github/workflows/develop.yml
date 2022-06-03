@@ -10,10 +10,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Dependency
+        run: yarn install
+      - name: Lint
+        run: yarn lint
       - name: Extract branch name
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF##*/} )"
-        id: extract_branch
+        run: echo ${GITHUB_REF##*/}
       - name: Deploy to Heroku 'svelte-kit-app-dev'
         uses: AkhileshNS/heroku-deploy@v3.12.12
         with:

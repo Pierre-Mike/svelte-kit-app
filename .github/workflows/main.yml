@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
+      - name: Dependency
+        run: yarn install
+      - name: Lint
+        run: yarn lint
       - name: Deploy to Heroku 'svelte-kit-app'
         uses: AkhileshNS/heroku-deploy@v3.12.12
         with:
