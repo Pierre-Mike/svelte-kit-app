@@ -1,4 +1,4 @@
-name: Deploy Dev
+name: Deploy develop
 
 on:
   push:
@@ -14,9 +14,12 @@ jobs:
         run: yarn install
       - name: Lint
         run: yarn lint
-      - name: Deploy To heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
+      - name: Extract branch name
+        shell: bash
+        run: echo ${GITHUB_REF##*/}
+      - name: Deploy to Heroku 'svelte-kit-app-dev'
+        uses: AkhileshNS/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'svelte-kit-app-dev' #Must be unique in Heroku
-          heroku_email: '${{secrets.HEROKU_EMAIL}}'
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
